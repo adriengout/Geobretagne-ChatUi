@@ -1,0 +1,38 @@
+services:
+  backend:
+    build: ./chat-geobretagne
+    restart: unless-stopped
+    environment:
+      BASE_URL: ${BASE_URL}
+      API_KEY: ${API_KEY}
+      MODEL: ${MODEL}
+      MCP_URL: ${MCP_URL:-}
+      PORT: 3000
+    image: geobretagne-chatui-backend:0.11
+    expose:
+      - "3000"
+    networks:
+      - default
+
+  frontend:
+    build:
+      context: ./mviewer-chat-widget
+      args:
+        BASE_PATH: ${BASE_PATH:-/chat}
+    restart: unless-stopped
+    environment:
+      BASE_PATH: ${BASE_PATH:-/chat}
+    image: geobretagne-chatui-frontend:0.11
+    ports:
+      - "8080:80"
+    volumes:
+      - ./mviewer-chat-widget/public/config/suggestions.json:/usr/share/nginx/html${BASE_PATH:-/chat}/config/suggestions.json:ro
+    depends_on:
+      - backend
+
+networks:
+  default: {}
+  # Décommentez et configurez ce bloc si MCP_URL pointe vers un service dans un autre compose :
+  # mcp_network:
+  #   external: true
+  #   name: mcp-mviewer-python_default

@@ -1,0 +1,18 @@
+{
+  "suggestions": [
+    "Qu'est-ce que ce chatbot sait faire ?",
+    "Quelle carte ce chatbot utilise-t-il par défaut ?",
+    "Y a-t-il des sites Natura 2000 sur la commune de Vannes ? Donne-moi leurs noms et leur fiche.",
+    "Comment indiquer au chatbot quelle carte utiliser ?"
+  ],
+  "suggestionsMap": {
+    "https://geobretagne.fr/app/viz" : "Viz (DREAL Bretagne)",
+    "https://geobretagne.fr/app/equinoxe" : "Equinoxe Nitrates (DREAL Bretagne)", 
+    "https://geobretagne.fr/app/mos" : "Mos Foncier (Dreal Bretagne)",
+    "https://geobretagne.fr/app/archeologie/" : "Archeologie (DRAC Bretagne)",
+    "https://geobretagne.fr/mviewer/apps/prod/dreal_bretagne/contexte_de_travail_eve_geobretagne.xml" : "Contexte EVE"
+
+  }
+    
+  
+}

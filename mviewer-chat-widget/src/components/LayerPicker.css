@@ -1,0 +1,120 @@
+.layer-picker {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-bg-soft);
+  overflow: hidden;
+  margin-top: var(--space-3);
+}
+
+.layer-picker__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-bg);
+}
+
+.layer-picker__title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.layer-picker__toggle-all {
+  font-size: 12px;
+  color: var(--color-primary);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.layer-picker__toggle-all:hover {
+  color: var(--color-primary-hover);
+}
+
+.layer-picker__list {
+  list-style: none;
+  margin: 0;
+  padding: var(--space-2) 0;
+  max-height: 55vh;
+  overflow-y: auto;
+}
+
+.layer-picker__item {
+  padding: 0;
+}
+
+.layer-picker__label {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  cursor: pointer;
+  font-size: 13px;
+  transition: background 0.1s;
+}
+
+.layer-picker__label:hover {
+  background: var(--color-bg-strong);
+}
+
+.layer-picker__checkbox {
+  flex-shrink: 0;
+  accent-color: var(--color-primary);
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+
+.layer-picker__name {
+  flex: 1;
+  color: var(--color-text);
+  font-size: 13px;
+  word-break: break-word;
+}
+
+.layer-picker__id {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--color-text-muted);
+}
+
+.layer-picker__count {
+  font-size: 11px;
+  color: var(--color-text-muted);
+  margin-left: 4px;
+}
+
+.layer-picker__footer {
+  padding: var(--space-3) var(--space-4);
+  border-top: 1px solid var(--color-border);
+  background: var(--color-bg);
+}
+
+.layer-picker__submit {
+  display: block;
+  width: 100%;
+  padding: var(--space-2) var(--space-4);
+  background: var(--color-primary);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.layer-picker__submit:hover:not(:disabled) {
+  background: var(--color-primary-hover);
+}
+
+.layer-picker__submit:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
