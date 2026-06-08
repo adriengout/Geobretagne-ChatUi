@@ -189,8 +189,6 @@ Le proxy Vite (`/api → http://localhost:3000`) est préconfigué dans `vite.co
 | `npm run dev` | Serveur avec rechargement automatique |
 | `npm run build` | Compilation TypeScript |
 | `npm run start` | Démarre le build compilé |
-| `npm run test:mcp` | Test de connexion au serveur MCP (`src/test-mcp.ts` à créer) |
-| `npm run test:chat` | Test d'envoi d'un message au backend (`src/test-chat.ts` à créer) |
 
 **Frontend** (`mviewer-chat-widget/`) :
 
